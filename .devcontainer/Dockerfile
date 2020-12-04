@@ -17,9 +17,11 @@ RUN if [ "${INSTALL_DOCKER}" = "true" ]; then \
 COPY library-scripts/terraform-debian.sh /tmp/library-scripts/
 RUN apt-get update && bash /tmp/library-scripts/terraform-debian.sh
 
+# ** [Optional] Uncomment this section to install additional packages. **
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends ansible jq
+    
 USER codespace
 
-# ** [Optional] Uncomment this section to install additional packages. **
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+
 
