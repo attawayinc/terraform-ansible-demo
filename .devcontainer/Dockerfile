@@ -13,6 +13,10 @@ RUN if [ "${INSTALL_DOCKER}" = "true" ]; then \
     fi \
     && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/
 
+# [Option] Install Terraform CLI & TFLint
+COPY library-scripts/terraform-debian.sh /tmp/library-scripts/
+RUN apt-get update && bash /tmp/library-scripts/terraform-debian.sh
+
 USER codespace
 
 # ** [Optional] Uncomment this section to install additional packages. **
