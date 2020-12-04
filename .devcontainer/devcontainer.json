@@ -43,7 +43,8 @@
 		"MS-vsliveshare.vsliveshare",
 		"VisualStudioExptTeam.vscodeintellicode",
 		"vymarkov.nodejs-devops-extension-pack",
-		"d4nyll.devops-extension-pack"
+		"d4nyll.devops-extension-pack",
+		"docsmsft.docs-authoring-pack"
 	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
